@@ -1,0 +1,74 @@
+
+
+//base
+.main {
+  color: white;
+  position: relative;
+  height: 100vh;
+
+  button {
+    float: right;
+    margin-top: 50px;
+    margin-right: 50px;
+    padding: 10px 50px;
+    font-size: 1.2rem;
+    font-weight: 300;
+
+  }
+
+  .logoBlock {
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+
+    .mainImage {
+      max-height: 500px;
+      margin-left: -8px;
+    }
+
+    ul {
+      list-style: none;
+      text-align: center;
+      padding-left: 0;
+
+      li {
+        display: block;
+        margin: 0 auto;
+        padding-top: 10px;
+        width: 150px;
+
+        a {
+          color: white;
+          font-size: 1.8rem;
+          font-weight: 500;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            background: #fff;
+            transition: width .3s;
+
+
+          }
+
+          &:hover{
+            &::after {
+              width: 100%;
+              transition: width .3s;
+
+            }
+          }
+        }
+
+
+      }
+    }
+  }
+}
